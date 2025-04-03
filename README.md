@@ -1,6 +1,6 @@
 # Django_Eshop
 	
-E-Shop Website(HTML,bootstrap,Django,SQL)
+E-Shop Website(HTML,bootstrap,Django,SQL)<br/>
 •  Developed user-friendly, responsive interfaces using Django templates and Bootstrap.
 •  Implemented secure user authentication and authorization systems.
 •  Integrated payment gateways for seamless transactions.
