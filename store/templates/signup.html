@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <div class="container">
+    <div class="p-4 m-4">
+      <div class="col-lg-5 border rounded pt-4">
+        <h4 class="alert alert-ligtht border rounded">Create an acount</h4>
+        <form action="/signup" method="POST">
+          {% csrf_token %}
+
+          {% if error %}
+            <div class="alert alert-danger" rol="alert">{{ error }}</div>
+          {% endif %}
+          <!-- Fastname -->
+          <div class="from-group">
+            <label for="">First Name</label>
+            <input type="text" name="firstname" id="" value="{{ values.first_name }}" class="form-control form-control-sm" />
+          </div>
+          <!-- last name -->
+          <div class="from-group">
+            <label for="">Last Name</label>
+            <input type="text" name="lastname" value="{{ values.last_name }}" id="" class="form-control form-control-sm" />
+          </div>
+          <!-- phone -->
+          <div class="from-group">
+            <label for="">Phone</label>
+            <input type="number" value="{{ values.phone }}" name="phone" id="" class="form-control form-control-sm" />
+          </div>
+          <!-- email -->
+          <div class="from-group">
+            <label for="">Email</label>
+            <input type="email" name="email" value="{{ values.email }}" id="" class="form-control form-control-sm" placeholder="Example@gmail.com" />
+          </div>
+          <!-- password -->
+          <div class="from-group">
+            <label for="">Password</label>
+            <input type="password" name="password" id="" class="form-control form-control-sm" placeholder="*******" />
+          </div>
+          <br />
+          <div class="form-group">
+            <input class="btn btn-sm btm-info" type="submit" value="Create an acount" />
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+{% endblock %}
